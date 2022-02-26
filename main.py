@@ -1,12 +1,11 @@
 from person import Person
 
-alex = Person('Alex', 29)
+alex = Person('Alex',29,'male')
+luana = Person('Luana',32,'female')
+luna = Person('Luna',5,'female')
 
 alex.talk('Physics')
-alex.talk('Physics')
-alex.stop_talking()
-alex.eat('cake')
-alex.stop_eating()
-alex.talk('Physics')
-
-print(alex.was_born_in())
+luana.talk('English')
+luna.talk('games')
+alex.eat('lunch')
+luana.eat('lunch')

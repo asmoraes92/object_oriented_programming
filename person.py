@@ -4,15 +4,29 @@ class Person:
 
 	current_year = int(datetime.strftime(datetime.now(), '%Y'))
 
-	def __init__(self,name,age,eating=False,talking=False):
+	def __init__(self,name,age,gender,eating=False,talking=False):
 		self.name = name
 		self.age = age
+		self.gender = gender
 		self.eating = eating
 		self.talking = talking
 
+		if self.gender == 'male':
+			self.subject_pronoun = 'he'
+			self.object_pronoun = 'him'
+			self.possessive_adjective = 'his'
+			self.possessive_pronoun = 'his'
+		elif self.gender == 'female':
+			self.subject_pronoun = 'she'
+			self.object_pronoun = 'her'
+			self.possessive_adjective = 'her'
+			self.possessive_pronoun = 'hers'
+		else:
+			raise AttributeError('This is only a simple test, therefore, gender must be "male" or "female".')
+
 	def talk(self,subject):
 		if self.eating:
-			print(f"{self.name} can't talk while eating.")
+			print(f"{self.name} can't talk because {self.subject_pronoun} is eating.")
 		elif self.talking:
 			print(f"{self.name} is already talking.")
 		else:
@@ -24,7 +38,7 @@ class Person:
 
 	def eat(self,food):
 		if self.talking:
-			print(f"{self.name} can't eat while talking.")
+			print(f"{self.name} can't eat because {self.subject_pronoun} is talking.")
 		elif self.eating:
 			print(f"{self.name} is already eating.")
 		else:
