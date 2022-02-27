@@ -8,3 +8,7 @@ prod2.discount(10)
 
 print(prod1.name, prod1.price)
 print(prod2.name, prod2.price)
+
+print(prod1.sold)
+prod1.sell_product()
+print(prod1.sold)

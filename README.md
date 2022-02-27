@@ -38,8 +38,8 @@ prod2.discount(10)
 
 print(prod1.name, prod1.price)
 print(prod2.name, prod2.price)
-<<<<<<< HEAD
+
+print(prod1.sold)
+prod1.sell_product()
+print(prod1.sold)
 ```
-=======
-```
->>>>>>> 0e8ad0ca63c9224b343c97bd801838d0b4dc1a32

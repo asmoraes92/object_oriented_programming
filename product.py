@@ -1,7 +1,8 @@
 class Product:
-	def __init__(self, name, price):
+	def __init__(self, name, price, sold=False):
 		self.name = name
 		self.price = price
+		self.sold = sold
 
 	def discount(self, percentage):
 		self.price = self.price - (self.price*percentage/100)
@@ -29,3 +30,5 @@ class Product:
 		value = value.title()
 		self._name = value
 
+	def sell_product(self):
+		self.sold = True
