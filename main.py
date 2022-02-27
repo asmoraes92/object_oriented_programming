@@ -1,11 +1,10 @@
-from person import Person
+from product import Product
 
-alex = Person('Alex',29,'male')
-luana = Person('Luana',32,'female')
-luna = Person('Luna',5,'female')
+prod1 = Product('First PRODUCT', '$50')
+prod2 = Product('SeCoNd product', 1750)
 
-alex.talk('Physics')
-luana.talk('English')
-luna.talk('games')
-alex.eat('lunch')
-luana.eat('lunch')
+prod1.discount(50)
+prod2.discount(10)
+
+print(prod1.name, prod1.price)
+print(prod2.name, prod2.price)
