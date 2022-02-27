@@ -1,4 +1,4 @@
-# object_oriented_programming
+# Object Oriented Programming
 
 I'm learning object oriented programming and I will add here all programs that I develop during this learning.
 
